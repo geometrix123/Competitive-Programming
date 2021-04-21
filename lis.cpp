@@ -5,7 +5,7 @@ ll lis(vector<ll> const& a) {
     d[0] = -INF;
 
     for (ll i = 0; i < n; i++) {
-        ll j = upper_bound(d.begin(), d.end(), a[i]) - d.begin();
+        ll j = upper_bound(d.begin(), d.end(), a[i])-d.begin();
         if (d[j-1] < a[i] && a[i] < d[j])
             d[j] = a[i];
     }
